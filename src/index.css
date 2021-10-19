@@ -18,23 +18,23 @@ ul {
 /* ------------------ Css starter ----------------------- */
 
 @font-face {
-  font-family: "BarlowSemiCondensed";
+  font-family: "Barlow Semi Condensed";
   src: local("BarlowSemiCondensed"),
     url(./assets/fonts/Barlow_Semi_Condensed/BarlowSemiCondensed-Regular.ttf)
       format("truetype");
 }
 
 @font-face {
-  font-family: "BarlowSemiCondensed";
+  font-family: "Barlow Semi Condensed";
   font-weight: bold;
-  src: local("BarlowSemiCondensed"),
+  src: local("Barlow Semi Condensed"),
     url(./assets/fonts/Barlow_Semi_Condensed//BarlowSemiCondensed-Bold.ttf)
       format("truetype");
 }
 
 body {
   margin: 0;
-  font-family: "BarlowSemiCondensed", -apple-system, BlinkMacSystemFont,
+  font-family: "Barlow Semi Condensed", -apple-system, BlinkMacSystemFont,
     "Segoe UI", "Roboto", "Oxygen", "Ubuntu", "Cantarell", "Fira Sans",
     "Droid Sans", "Helvetica Neue", sans-serif;
   -webkit-font-smoothing: antialiased;
@@ -50,4 +50,14 @@ code {
   --Dark_Text: hsl(229, 25%, 31%);
   --Score_Text: hsl(229, 64%, 46%);
   --Header_Outline: hsl(217, 16%, 45%);
+}
+
+img {
+  width: 100%;
+  height: 100%;
+}
+
+svg {
+  width: 100%;
+  height: 100%;
 }

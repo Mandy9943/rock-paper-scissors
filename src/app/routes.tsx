@@ -6,7 +6,7 @@ const routes = () => {
       <Switch>
         <Route
           path="/rock_paper_scissors"
-          component={lazy(() => import("./views/pages/rock_paper_scissors"))}
+          component={lazy(() => import("./views/pages/RockPaperScissorsPage"))}
           exact
         />
         <Redirect from="/" to="/rock_paper_scissors" />

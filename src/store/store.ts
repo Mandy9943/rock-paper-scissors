@@ -1,9 +1,11 @@
-import { configureStore, ThunkAction, Action } from '@reduxjs/toolkit';
-import counterReducer from '../features/counter/counterSlice';
+import { configureStore, ThunkAction, Action } from "@reduxjs/toolkit";
+import counterReducer from "../features/counter/counterSlice";
+import rockPaperScissorsReducer from "../features/RockPaperScissors/RockPaperScissorsSlice";
 
 export const store = configureStore({
   reducer: {
     counter: counterReducer,
+    rockPaperScissors: rockPaperScissorsReducer,
   },
 });
 
