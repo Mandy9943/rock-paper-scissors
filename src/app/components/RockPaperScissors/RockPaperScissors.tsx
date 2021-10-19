@@ -1,4 +1,4 @@
-import React from "react";
+import React, { useEffect } from "react";
 import {
   HeaderS,
   RockPaperScissorsWrapper,
@@ -10,6 +10,7 @@ import Rules from "./componentes/Rules/Rules";
 import PlayGround from "./componentes/PlayGround/PlayGround";
 
 const RockPaperScissors = () => {
+  useEffect(() => {}, []);
   return (
     <RockPaperScissorsWrapper>
       <WrapperHeaderS>
