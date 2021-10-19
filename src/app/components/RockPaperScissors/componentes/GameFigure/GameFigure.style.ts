@@ -9,6 +9,11 @@ export const GameFigureWrapperS = styled.div`
   width: 100px;
   height: 100px;
   cursor: pointer;
+
+  @media (max-width: 500px) {
+    width: 85px;
+    height: 85px;
+  }
 `;
 export const GameFigureS = styled.div<IGameFigureS>`
   width: 100%;

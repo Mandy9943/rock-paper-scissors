@@ -12,10 +12,17 @@ export const RockPaperScissorsWrapper = styled.div`
 export const WrapperHeaderS = styled.div`
   margin-top: 30px;
   width: 100%;
+  @media (max-width: 500px) {
+    margin-top: 20px;
+  }
 `;
 export const HeaderS = styled.div`
-  width: 50%;
+  width: 65%;
   margin: auto;
+
+  @media (max-width: 500px) {
+    width: 90%;
+  }
 `;
 
 export const RulesWrapperS = styled.div`
@@ -23,4 +30,13 @@ export const RulesWrapperS = styled.div`
   bottom: 25px;
   right: 25px;
   width: 70px;
+  @media (max-width: 500px) {
+    position: absolute;
+    bottom: 25px;
+    left: 0;
+    right: 0;
+    width: 100%;
+    display: flex;
+    justify-content: center;
+  }
 `;

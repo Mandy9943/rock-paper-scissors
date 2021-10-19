@@ -17,7 +17,7 @@ interface IProps {
   onClick?: (type: GameFigureTypes) => void;
 }
 
-const GameFigure = ({ type = "scissors", size = "100px", onClick }: IProps) => {
+const GameFigure = ({ type = "scissors", size, onClick }: IProps) => {
   let styleFigure = {
     background: "linear-gradient(hsl(39, 89%, 49%), hsl(40, 84%, 53%))",
     borderColor: "#b37c05",

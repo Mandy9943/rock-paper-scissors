@@ -17,12 +17,22 @@ export const PlayGroundWrapperS = styled.main`
   justify-content: center;
   align-items: center;
   flex: 1;
+  @media (max-width: 500px) {
+    align-items: flex-start;
+    margin-top: 60px;
+    flex: initial;
+  }
 `;
 export const ContentS = styled.div`
   width: 180px;
   height: 150px;
 
   position: relative;
+
+  @media (max-width: 500px) {
+    width: 144px;
+    height: 120px;
+  }
 `;
 
 export const TriangleContent = styled.div<ITriangleContent>`
