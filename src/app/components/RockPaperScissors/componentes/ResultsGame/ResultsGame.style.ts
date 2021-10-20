@@ -60,5 +60,7 @@ export const ResultStatsS = styled(animated.div)`
   @media (max-width: 500px) {
     position: absolute;
     bottom: -100px;
+    left: 0;
+    right: 0;
   }
 `;
