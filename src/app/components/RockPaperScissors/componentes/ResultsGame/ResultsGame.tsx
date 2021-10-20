@@ -25,17 +25,24 @@ import {
 } from "./ResultsGame.style";
 
 const ResultsGame = () => {
+  // Variables de estado redux con la seleccion de la casa y la del usurio
   const userSelection = useAppSelector(selectUserSelection);
   const houseSelection = useAppSelector(selecHouseSelection);
+  //Dispatch para dispatch actions
   const dispatch = useAppDispatch();
 
+  // Muestra el cartel final de si se gano o se perdio o se empato
   const [showWinner, setShowWinner] = useState(false);
+  // Texto que muestra el resultado final
   const [result, setresult] = useState<PlayerResult>("You Win");
 
+  //Cuando cargue el componente hacer que la casa seleccione una opcion
   useEffect(() => {
     dispatch(makeHouseSelection());
   }, [dispatch]);
 
+  // Cuando el se pueda mostrar el cartel con showWinner determinar el resultado final mediante la funcion getRockPaperScissorsWinner
+  //En caso de que se haya ganado icrementa en 1 la putuacion de lo contrario decrementa en 1
   useEffect(() => {
     if (userSelection && houseSelection && showWinner) {
       const result = getRockPaperScissorsWinner(userSelection, houseSelection);
@@ -48,23 +55,27 @@ const ResultsGame = () => {
     }
   }, [houseSelection, userSelection, dispatch, showWinner]);
 
+  /* Funcion que te resete la opcion del usurio obligando a que el usrio tenga que volver a elegir */
   const handlePlayAgain = () => {
     dispatch(selectUserFigure(null));
   };
 
+  // Cuando se ejecuta esta funcion se espera un tiempo para mostrar el cartel del ganador
   const callShoeWinner = () => {
     setTimeout(function () {
       setShowWinner(true);
     }, 100);
   };
 
+  // Animacion de la seleccion de la casa, cuando termine la animacion llama callShoeWinner para mostrar el cartel del ganador
   const animationHouseFigure = useSpring({
     to: { opacity: 1 },
     from: { opacity: 0 },
     onResolve: callShoeWinner,
-    // onPause: callShoeWinner,
     config: config.default,
   });
+
+  // Animacion del cartel del ganador que tiene una duracion de 1s
   const animationResultBox = useSpring({
     to: { opacity: 1, y: 0 },
     from: { opacity: 0, y: 110 },
@@ -79,7 +90,11 @@ const ResultsGame = () => {
         <TextSelectionS>You Picked</TextSelectionS>
         {userSelection && (
           <FigureS>
-            <GameFigure size="100%" type={userSelection} />
+            <GameFigure
+              size="100%"
+              type={userSelection}
+              isWinner={result === "You Win" && showWinner}
+            />
           </FigureS>
         )}
       </GameSelectionsS>
@@ -96,7 +111,11 @@ const ResultsGame = () => {
         <TextSelectionS>The house Picked</TextSelectionS>
         {houseSelection && (
           <FigureS style={animationHouseFigure}>
-            <GameFigure size="100%" type={houseSelection} />
+            <GameFigure
+              size="100%"
+              type={houseSelection}
+              isWinner={result === "You Lose" && showWinner}
+            />
           </FigureS>
         )}
       </GameSelectionsS>

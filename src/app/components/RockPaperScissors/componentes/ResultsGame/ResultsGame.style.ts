@@ -17,6 +17,7 @@ export const GameSelectionsS = styled.div`
   flex-direction: column;
   align-items: center;
   padding: 40px;
+
   @media (max-width: 500px) {
     flex-direction: column-reverse;
     position: relative;
@@ -29,6 +30,8 @@ export const TextSelectionS = styled.p`
   letter-spacing: 1.2px;
 
   margin-bottom: 30px;
+  position: relative;
+  z-index: 10;
 
   @media (max-width: 500px) {
     margin-top: 20px;
@@ -43,12 +46,12 @@ export const FigureS = styled(animated.div)`
   }
 `;
 export const ResultStatsS = styled(animated.div)`
-  width: 200px;
-  margin: 0 50px;
+  margin: 0 35px;
+  z-index: 10;
   .text-result {
     color: white;
     text-transform: uppercase;
-    font-size: 25px;
+    font-size: 45px;
     font-weight: bold;
     margin-bottom: 10px;
     text-align: center;

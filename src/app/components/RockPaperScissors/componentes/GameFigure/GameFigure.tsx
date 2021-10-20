@@ -15,9 +15,10 @@ interface IProps {
   type?: GameFigureTypes;
   size?: string;
   onClick?: (type: GameFigureTypes) => void;
+  isWinner?: boolean;
 }
 
-const GameFigure = ({ type = "scissors", size, onClick }: IProps) => {
+const GameFigure = ({ type = "scissors", size, onClick, isWinner }: IProps) => {
   let styleFigure = {
     background: "linear-gradient(hsl(39, 89%, 49%), hsl(40, 84%, 53%))",
     borderColor: "#b37c05",
@@ -63,7 +64,9 @@ const GameFigure = ({ type = "scissors", size, onClick }: IProps) => {
             }
       }
     >
+      {/* <div></div> */}
       <GameFigureS
+        isWinner={isWinner}
         background={styleFigure.background}
         borderColor={styleFigure.borderColor}
       >

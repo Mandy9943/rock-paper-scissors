@@ -7,6 +7,7 @@ export const RockPaperScissorsWrapper = styled.div`
   padding: 1px;
   display: flex;
   flex-direction: column;
+  overflow: hidden;
 `;
 
 export const WrapperHeaderS = styled.div`
