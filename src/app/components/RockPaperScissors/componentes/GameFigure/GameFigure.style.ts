@@ -48,13 +48,13 @@ export const GameFigureS = styled.div<IGameFigureS>`
         transform: translate(-50%, -50%);
         width: 100%;
         height: 100%;
-        border: 40px solid rgb(82 103 147 / 38%);
+        border: 40px solid transparent;
         border-radius: 100%;
-        animation: latido linear 8s infinite;
+        animation: latido linear 6s infinite;
       }
 
       ::before {
-        animation-delay: 4s;
+        animation-delay: 3s;
       }
       @keyframes latido {
         0% {
