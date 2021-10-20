@@ -40,5 +40,5 @@ export const ModaCloseButtonS = styled.span`
   }
 `;
 export const ModalContentS = styled.div`
-  padding-top: 20px;
+  padding-top: 25px;
 `;

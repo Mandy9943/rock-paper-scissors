@@ -14,7 +14,7 @@ const Rules = () => {
   };
 
   return (
-    <div style={{ width: "80px" }}>
+    <div style={{ width: "90px" }}>
       <Button onClick={openModal}>Rules</Button>
       {isModal && (
         <Modal title="Rules" onClose={closeModal}>

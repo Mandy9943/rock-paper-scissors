@@ -6,13 +6,13 @@ interface IGameFigureS {
 }
 
 export const GameFigureWrapperS = styled.div`
-  width: 100px;
-  height: 100px;
+  width: 200px;
+  height: 200px;
   cursor: pointer;
 
   @media (max-width: 500px) {
-    width: 85px;
-    height: 85px;
+    width: 100px;
+    height: 100px;
   }
 `;
 export const GameFigureS = styled.div<IGameFigureS>`

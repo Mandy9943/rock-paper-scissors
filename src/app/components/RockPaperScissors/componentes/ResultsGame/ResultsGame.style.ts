@@ -16,10 +16,11 @@ export const GameSelectionsS = styled.div`
   display: flex;
   flex-direction: column;
   align-items: center;
-  padding: 15px;
+  padding: 40px;
   @media (max-width: 500px) {
     flex-direction: column-reverse;
     position: relative;
+    padding: 10px;
   }
 `;
 export const TextSelectionS = styled.p`
@@ -34,26 +35,27 @@ export const TextSelectionS = styled.p`
   }
 `;
 export const FigureS = styled(animated.div)`
-  width: 130px;
-  height: 130px;
+  width: 250px;
+  height: 250px;
   @media (max-width: 500px) {
     width: 100px;
     height: 100px;
   }
 `;
 export const ResultStatsS = styled(animated.div)`
-  width: fit-content;
-  margin: 0 20px;
+  width: 200px;
+  margin: 0 50px;
   .text-result {
     color: white;
     text-transform: uppercase;
     font-size: 25px;
     font-weight: bold;
     margin-bottom: 10px;
+    text-align: center;
   }
 
   @media (max-width: 500px) {
     position: absolute;
-    bottom: -50px;
+    bottom: -100px;
   }
 `;

@@ -15,11 +15,11 @@ export const ButtonS = styled.button<IButtonS>`
   display: flex;
   align-items: center;
   justify-content: center;
-  height: 22px;
+  height: 30px;
   border-radius: 5px;
   border: 0.5px solid white;
   letter-spacing: 1.2px;
-  font-size: 8px;
+
   text-transform: uppercase;
   cursor: pointer;
 

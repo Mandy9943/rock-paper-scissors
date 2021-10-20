@@ -19,19 +19,19 @@ export const PlayGroundWrapperS = styled.main`
   flex: 1;
   @media (max-width: 500px) {
     align-items: flex-start;
-    margin-top: 60px;
+    margin-top: 110px;
     flex: initial;
   }
 `;
 export const ContentS = styled.div`
-  width: 180px;
-  height: 150px;
+  width: 360px;
+  height: 300px;
 
   position: relative;
 
   @media (max-width: 500px) {
-    width: 144px;
-    height: 120px;
+    width: 180px;
+    height: 150px;
   }
 `;
 

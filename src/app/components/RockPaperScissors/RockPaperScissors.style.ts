@@ -27,8 +27,8 @@ export const HeaderS = styled.div`
 
 export const RulesWrapperS = styled.div`
   position: absolute;
-  bottom: 25px;
-  right: 25px;
+  bottom: 30px;
+  right: 45px;
   width: 70px;
   @media (max-width: 500px) {
     position: absolute;
