@@ -60,7 +60,7 @@ export const GameFigureS = styled.div<IGameFigureS>`
         0% {
           width: 100%;
           height: 100%;
-          border: 40px solid rgb(82 103 147 / 38%);
+          border: 30px solid rgb(82 103 147 / 38%);
         }
         50% {
           width: 150%;

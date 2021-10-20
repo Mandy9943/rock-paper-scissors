@@ -33,6 +33,8 @@ const ResultsGame = () => {
 
   // Muestra el cartel final de si se gano o se perdio o se empato
   const [showWinner, setShowWinner] = useState(false);
+  // Muestra el cartel final de si se gano o se perdio o se empato
+  const [wawes, setwawes] = useState(false);
   // Texto que muestra el resultado final
   const [result, setresult] = useState<PlayerResult>("You Win");
 
@@ -67,6 +69,14 @@ const ResultsGame = () => {
     }, 100);
   };
 
+  // Cuando se ejecuta esta funcion se espera un tiempo para mostrar el cartel del ganador
+  const handleShowWawes = () => {
+    if (wawes === false) {
+      console.log(wawes, "holaa");
+      setwawes(true);
+    }
+  };
+
   // Animacion de la seleccion de la casa, cuando termine la animacion llama callShoeWinner para mostrar el cartel del ganador
   const animationHouseFigure = useSpring({
     to: { opacity: 1 },
@@ -80,6 +90,7 @@ const ResultsGame = () => {
     to: { opacity: 1, y: 0 },
     from: { opacity: 0, y: 110 },
     delay: 1000,
+    onResolve: handleShowWawes,
 
     config: config.molasses,
   });
@@ -93,7 +104,7 @@ const ResultsGame = () => {
             <GameFigure
               size="100%"
               type={userSelection}
-              isWinner={result === "You Win" && showWinner}
+              isWinner={result === "You Win" && showWinner && wawes}
             />
           </FigureS>
         )}
@@ -114,7 +125,7 @@ const ResultsGame = () => {
             <GameFigure
               size="100%"
               type={houseSelection}
-              isWinner={result === "You Lose" && showWinner}
+              isWinner={result === "You Lose" && showWinner && wawes}
             />
           </FigureS>
         )}
